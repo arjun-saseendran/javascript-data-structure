@@ -51,6 +51,21 @@ class LinkedList {
     this.size--;
     return removeNode.data;
   }
+  getIndex(data){
+    if (!this.head) return 'The linked list is empty!';
+    let current = this.head;
+    let index = 0;
+    while(current){
+      if(current.data ===  data){
+        return index;
+      }else{
+        current = current.next;
+        index++;
+      }
+    }
+    return 'Item not found!'
+    
+  }
   printList(){
     let current = this.head;
     while(current){
